@@ -1,6 +1,6 @@
 import sys
 input = sys.stdin.readline
-word = input()
+word = input().strip()
 total = 0
 alp = ["ABC", "DEF", "GHI", "JKL", "MNO", "PQRS", "TUV", "WXYZ"]
 for w in word:
