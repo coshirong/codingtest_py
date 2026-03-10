@@ -1,11 +1,15 @@
 import sys
 input = sys.stdin.readline
+alp = ['ABC', 'DEF', 'GHI',
+      'JKL', 'MNO', 'PQRS',
+      'TUV', 'WXYZ']
+dict_alp = {}
+for i, unit in enumerate(alp):
+    for w in unit:
+        dict_alp[w] = i + 3
+        
 word = input().strip()
 total = 0
-alp = ["ABC", "DEF", "GHI", "JKL", "MNO", "PQRS", "TUV", "WXYZ"]
 for w in word:
-    for i, sett in enumerate(alp):
-        if w in sett:
-            total += i + 3
-            break
+    total += dict_alp[w]
 print(total)
